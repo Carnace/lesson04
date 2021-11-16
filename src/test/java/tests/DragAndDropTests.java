@@ -20,6 +20,7 @@ public class DragAndDropTests {
     void checkDragAndDropFunction(){
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
-        $$("header").first().shouldHave(text("B"));
+        $("#column-a").shouldHave(text("B"));
+        $("#column-b").shouldHave(text("A"));
     }
 }

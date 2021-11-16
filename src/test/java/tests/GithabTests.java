@@ -12,11 +12,11 @@ public class GithabTests {
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;
+        Configuration.headless = false;
     }
 
     @Test
     void checkTextOnPagesOnWiki() {
-        Configuration.headless = false;
         // открыть страничку selenide
         open("https://github.com/selenide/selenide");
         // перейти в раздел Wiki проекта
